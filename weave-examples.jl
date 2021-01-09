@@ -12,6 +12,7 @@ function polish_latex(path::String)
         txt = replace(txt, beg_align => "\$\$\n\\begin{align}")
         txt = replace(txt, end_align => "\\end{align}\n\$\$")
 
+        # CONT TODO 
         # Make inline math work.
         inline = r"(?<=[^\\])\$(?!\$)"
         txt = replace(txt, inline => raw"$$")
